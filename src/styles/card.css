@@ -1,0 +1,129 @@
+:root {
+  --Light_red_work: hsl(15, 100%, 70%);
+  --Soft_blue_play: hsl(195, 74%, 62%);
+  --Light_red_study: hsl(348, 100%, 68%);
+  --Lime_green_exercise: hsl(145, 58%, 55%);
+  --Violet_social: hsl(264, 64%, 52%);
+  --Soft_orange_self_care: hsl(43, 84%, 65%);
+  /*Neutral*/
+  --Very_dark_blue: hsl(226, 43%, 10%);
+  --Dark_blue: hsl(235, 46%, 20%);
+  --Desaturated_blue: hsl(235, 45%, 61%);
+  --Pale_Blue: hsl(236, 100%, 87%);
+}
+#main-card-container {
+  width: 100%;
+  max-width: 385px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-bottom: -25px;
+  transition: all 0.3s ease-in-out;
+}
+#main-card-container:hover {
+  transform: scale(1.1);
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeInAnimation {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+.img_card_container {
+  text-align: right;
+  padding-right: 20px;
+  height: 90px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 0;
+}
+.Work {
+  background-color: var(--Light_red_work);
+}
+.Play {
+  background-color: var(--Soft_blue_play);
+}
+.Study {
+  background-color: var(--Light_red_study);
+}
+.Exercise {
+  background-color: var(--Lime_green_exercise);
+}
+.Social {
+  background-color: var(--Violet_social);
+}
+.Self {
+  background-color: var(--Soft_orange_self_care);
+}
+
+.card_info {
+  position: relative;
+  z-index: 3;
+  background-color: var(--Dark_blue);
+  border-radius: 15px;
+  padding: 20px;
+  transform: translateY(-43px);
+}
+.card_info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: max-content;
+}
+.card_info p {
+  margin: 5px 0;
+  padding: 0;
+}
+
+.action_size {
+  font-size: 18px;
+  color: white;
+}
+.hours {
+  font-size: 26px;
+  color: white;
+  font-weight: 300;
+}
+.previous {
+  color: var(--Pale_Blue);
+  font-size: 13px;
+  letter-spacing: 1.1px;
+}
+.point {
+  color: var(--Pale_Blue);
+  font-size: 26px;
+  letter-spacing: 1.1px;
+  transform: translateY(-8px);
+}
+@media screen and (min-width: 750px) {
+  #main-card-container {
+    max-width: 335px;
+    height: max-content;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #main-card-container {
+    max-width: 220px;
+  }
+  .card_info {
+    height: 162px;
+  }
+  .card_info :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

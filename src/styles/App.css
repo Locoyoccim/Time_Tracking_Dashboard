@@ -1,0 +1,31 @@
+section {
+  width: 90%;
+  max-width: 733px;
+  margin: 0 5%;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+.utilities {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  position: relative;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1000px) {
+  section {
+    max-width: 1040px;
+    max-height: max-content;
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+  }
+}

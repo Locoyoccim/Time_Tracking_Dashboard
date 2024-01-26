@@ -1,0 +1,122 @@
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  /*Neutral*/
+  --Very_dark_blue: hsl(226, 43%, 10%);
+  --Dark_blue: hsl(235, 46%, 20%);
+  --Desaturated_blue: hsl(235, 45%, 61%);
+  --Pale_Blue: hsl(236, 100%, 87%);
+}
+#main_profile_container {
+  width: 100%;
+}
+.profile_container {
+  color: var(--Pale_Blue);
+  background-color: var(--Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  min-height: 160px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 3;
+  padding: 0;
+}
+.names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+}
+.about_user,
+.names {
+  margin: 0;
+  padding: 0;
+}
+.about_user p,
+.names p {
+  padding: 0;
+  margin: 5px 0;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 1.1px;
+}
+.img_container img {
+  width: 70px;
+  border: 4px solid white;
+  border-radius: 50%;
+}
+
+.name,
+.lastname {
+  font-size: 24px;
+}
+.timing-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--Dark_blue);
+  color: var(--Desaturated_blue);
+  min-height: 100px;
+  border-radius: 15px;
+  align-items: flex-end;
+  transform: translateY(-25px);
+  z-index: 0;
+  position: relative;
+}
+button {
+  border: none;
+  width: 95px;
+  background-color: transparent;
+  color: var(--Pale_Blue);
+  cursor: pointer;
+  margin: 0 0 25px 0;
+  padding: 0;
+  transition: all 0.3s ease-in;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+}
+button:hover {
+  color: white;
+  transform: scale(1.2);
+}
+.daily,
+.weekly,
+.monthly {
+  transition: all 0.3s ease;
+}
+.daily.active,
+.weekly.active,
+.monthly.active {
+  color: white;
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+@media screen and (min-width: 1000px) {
+  .profile_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 25px;
+    height: 295px;
+    width: 210px;
+  }
+  .timing-container {
+    display: grid;
+    height: 175px;
+    justify-content: flex-start;
+    align-content: end;
+    gap: 15px;
+    padding: 0 0 25px 25px;
+  }
+  button {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  .names {
+    display: flex;
+    flex-direction: column;
+  }
+}
