@@ -3,7 +3,7 @@ import { useState } from "react";
 import "/src/styles/App.css";
 import PerformanceCard from "./Performance";
 import ImgProfile from "/src/assets/image-jeremy.png";
-import Card from "./card.jsx";
+import Card from "/src/componentes/Card.jsx";
 import info from "/data.json";
 import WorkImg from "/src/assets/icon-work.svg";
 import playImg from "/src/assets/icon-play.svg";
